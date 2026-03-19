@@ -52,6 +52,7 @@ fn panic(info: &core::panic::PanicInfo) -> ! {
 }
 
 // Modules matching std::*
+pub mod sys;
 pub mod syscall;
 pub mod io;
 pub mod fs;
