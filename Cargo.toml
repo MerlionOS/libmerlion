@@ -1,0 +1,16 @@
+[package]
+name = "libmerlion"
+version = "0.1.0"
+edition = "2021"
+description = "Rust std library shim for MerlionOS — maps std types to MerlionOS syscalls"
+license = "MIT"
+repository = "https://github.com/MerlionOS/libmerlion"
+
+[lib]
+name = "merlion_std"
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dependencies]
