@@ -56,6 +56,8 @@ pub mod syscall;
 pub mod io;
 pub mod fs;
 pub mod net;
+pub mod os;
+pub mod mio;
 pub mod thread;
 pub mod sync;
 pub mod time;

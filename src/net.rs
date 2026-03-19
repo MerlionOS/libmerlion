@@ -125,6 +125,9 @@ impl TcpListener {
     pub fn local_addr(&self) -> Result<SocketAddr> {
         Ok(self.addr)
     }
+
+    /// Get raw internal ID (for AsRawFd).
+    pub fn raw_id(&self) -> i64 { self.id }
 }
 
 /// Trait for things convertible to SocketAddr (like std::net::ToSocketAddrs).
@@ -192,6 +195,9 @@ impl TcpStream {
 
     /// Set read timeout (no-op in our implementation).
     pub fn set_read_timeout(&self, _dur: Option<crate::time::Duration>) -> Result<()> { Ok(()) }
+
+    /// Get raw internal ID (for AsRawFd).
+    pub fn raw_id(&self) -> i64 { self.id }
 }
 
 /// Shutdown direction.
